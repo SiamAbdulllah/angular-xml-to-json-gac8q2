@@ -1,0 +1,54 @@
+<input type="file" (change)="selectFile($event)"/>
+Select Xml File
+
+<form [formGroup]="formGroup">
+	<div formGroupName="Company">
+		<h2>Personal Details</h2>
+		<div formGroupName="Employee">
+			<div formGroupName="FirstName">
+				First Name :
+				<input placeholder="First Name" formControlName ="_text">
+    </div>
+				<div formGroupName="LastName">
+					Middle Name :
+					<input placeholder="Last Name" formControlName ="_text">
+    </div>
+					<div formGroupName="Email">
+						Email:
+						<input placeholder="Email" formControlName ="_text">
+    </div>
+						<div formGroupName="ContactNo">
+							ContactNo :
+							<input placeholder="Contact No" formControlName ="_text">
+    </div>
+							<h2>Address</h2>
+							<div formGroupName="Address">
+								<div formGroupName="City">
+									City :
+									<input placeholder="City" formControlName ="_text">
+      </div>
+
+									<div formGroupName="State">
+										State :
+										<input placeholder="State" formControlName ="_text">
+      </div>
+
+										<div formGroupName="Zip">
+											Zip :
+											<input placeholder="Zip" formControlName ="_text">
+      </div>
+										</div>
+									</div>
+								</div>
+
+								<button type="button" (click)="onSave()">Save</button>
+</form>
+
+Input Xml :
+
+{{inputXml}}
+<br>
+_____________________
+<br>
+Output :
+{{this.outputXml}}
